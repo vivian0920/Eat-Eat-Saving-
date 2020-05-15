@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2F83CF"
+    android:padding="10dp"
+    tools:context=".SetUserName">
+
+    <EditText
+        android:id="@+id/userName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginHorizontal="40dp"
+
+        android:ems="10"
+        android:layout_below="@id/imageView2"
+        android:hint="請輸入您的暱稱"
+        android:inputType="textPersonName"
+        android:textAllCaps="true"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+        <requestFocus></requestFocus>
+        <!--centerInParent : the center of whole view
+        ems: just show the word  you set within the length, if the word over the length, it can't show
+        textAllCaps:set the word to upper-case-->
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="190dp"
+        android:layout_height="223dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="180dp"
+        tools:src="@drawable/dinosaur"
+        android:icon="@drawable/dinosaur"/>
+        <!-- ImageView have to modify while the picture input -->
+
+    <Button
+        android:id="@+id/nextButton"
+        android:layout_width="119dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/setNameHint"
+        android:background="#067461"
+        android:layout_marginTop="10dp"
+        android:onClick="gotoSetTarget"
+        android:text="Next"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/setNameHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/userName"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="   "
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

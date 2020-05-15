@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2F83CF"
+    android:padding="10dp"
+    tools:context=".SetTarget">
+
+    <TextView
+        android:id="@+id/sayHallo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"
+        android:text="@string/textview"
+        android:textAllCaps="false"
+        android:textSize="36sp"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/setTarget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/sayHallo"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:layout_toLeftOf="@id/Target"
+        android:text="請設定存錢目的 : "
+        android:textSize="24sp"
+        android:textStyle="bold" />
+    <EditText
+        android:id="@+id/Target"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignBaseline="@id/setTarget"
+        android:ems="10"
+        android:inputType="textPersonName"
+
+        android:textSize="24sp" />
+    <!--alignParentEnd,alignParentRight are the same in our counter-->
+    <requestFocus></requestFocus>
+
+    <requestFocus></requestFocus>
+
+    <requestFocus></requestFocus>
+
+    <TextView
+        android:id="@+id/setSavingAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/setTarget"
+        android:layout_marginTop="30dp"
+        android:layout_toLeftOf="@id/SavingAmount"
+        android:layout_marginRight="5dp"
+        android:text="請設定預計存錢金額 : "
+        android:textSize="24sp"
+        android:textStyle="bold" />
+    <EditText
+        android:id="@+id/SavingAmount"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignBaseline="@id/setSavingAmount"
+        android:layout_alignParentTop="true"
+        android:ems="10"
+        android:inputType="number" />
+
+
+
+    <TextView
+        android:id="@+id/setDailyCost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/setSavingAmount"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="30dp"
+        android:layout_toLeftOf="@id/DailyCost"
+
+        android:text="請估算每日可用金額 : "
+        android:ems="12"
+        android:textSize="24sp"
+        />
+
+    <EditText
+        android:id="@+id/DailyCost"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignBaseline="@id/setDailyCost"
+        android:layout_below="@id/setSavingAmount"
+        android:ems="10"
+        android:inputType="number"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/DailyCostHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/setDailyCost"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="10dp"
+        android:text="(含三餐)"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/setDueDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/DailyCostHint"
+        android:layout_marginTop="10dp"
+        android:layout_toLeftOf="@id/dueDate"
+        android:layout_marginRight="5dp"
+        android:text="請設定到期日 : "
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/dueDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/setDueDate"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:background="#00FFFFFF"
+        android:onClick="onClick"
+        android:text="____ / ____  / ____ "
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/setDueDate"
+        android:layout_marginTop="40dp"
+        android:text="是否願意每日收到存錢提醒?"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/Hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/checkBox"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:text="  "
+        android:textSize="20sp"
+        android:textStyle="bold">
+
+    </TextView>
+
+
+
+    <Button
+        android:id="@+id/backBotton"
+        android:layout_width="119dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_below="@id/Hint"
+        android:layout_marginTop="20dp"
+        android:background="#067461"
+        android:onClick="gobacktoSetUserName"
+        android:text="BACK"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/nextButton"
+        android:layout_width="119dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/backBotton"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="40dp"
+        android:layout_marginRight="40dp"
+        android:background="#067461"
+        android:onClick="gotoConfirmInformation"
+        android:text="NEXT"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+
+
+
+</RelativeLayout>
